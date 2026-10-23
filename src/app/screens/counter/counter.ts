@@ -15,7 +15,9 @@ export class Counter {
   }
 
   decrement() {
-    this.count.update((n) => n -1);
+    if(this.count() > 0){
+      this.count.update((n) => n -1);
+    }
   }
 
   reset() {
